@@ -2,14 +2,97 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Chatbot Elvis</title>
+  <title>Chatbot GARAÑON - Segunda Guerra Mundial</title>
   <link rel="stylesheet" href="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/themes/df-messenger-default.css">
   <script src="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/df-messenger.js"></script>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: url('https://images.unsplash.com/photo-1604186838366-3f5e1c2e2c12?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80') no-repeat center center fixed;
+      background-size: cover;
+      color: #f0f0f0;
+      text-align: center;
+    }
+
+    header {
+      background: rgba(0, 0, 0, 0.7);
+      padding: 20px;
+      border-bottom: 2px solid #555;
+    }
+
+    header h1 {
+      font-size: 2.5em;
+      color: #d4d4aa;
+      font-family: "Courier New", Courier, monospace;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+    }
+
+    main {
+      max-width: 800px;
+      margin: 50px auto;
+      background: rgba(0, 0, 0, 0.65);
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0px 0px 15px rgba(0,0,0,0.7);
+    }
+
+    main h2 {
+      color: #e0e0b0;
+      margin-bottom: 15px;
+    }
+
+    main p {
+      font-size: 1.1em;
+      line-height: 1.6;
+      color: #ddd;
+    }
+
+    footer {
+      margin-top: 40px;
+      padding: 15px;
+      background: rgba(0, 0, 0, 0.7);
+      font-size: 0.9em;
+      color: #aaa;
+    }
+
+    /* Chatbot estilos */
+    df-messenger {
+      z-index: 999;
+      position: fixed;
+      --df-messenger-font-color: #000;
+      --df-messenger-font-family: Google Sans;
+      --df-messenger-chat-background: #f3f6fc;
+      --df-messenger-message-user-background: #a3b18a;
+      --df-messenger-message-bot-background: #fff;
+      bottom: 16px;
+      right: 16px;
+    }
+  </style>
 </head>
 <body>
-  <h2>Bienvenido al Chatbot Elvis</h2>
-  <p>Este asistente puede responder preguntas sobre [explica aquí qué conocimiento le cargaste: ejemplo, consultas frecuentes, soporte académico, etc.].</p>
+  <header>
+    <h1>GARAÑON - Chatbot de la Segunda Guerra Mundial</h1>
+  </header>
 
+  <main>
+    <h2>Explora la Historia</h2>
+    <p>
+      Este sitio está dedicado a ofrecer información y curiosidades sobre la Segunda Guerra Mundial.  
+      A través de nuestro asistente virtual <strong>GARAÑON</strong>, podrás interactuar y consultar datos sobre batallas, líderes, fechas históricas y mucho más.  
+    </p>
+    <p>
+      Haz clic en el ícono de chat en la esquina inferior derecha y comienza a conversar con el asistente.
+    </p>
+  </main>
+
+  <footer>
+    © 2025 Chatbot GARAÑON - Desarrollado para fines académicos
+  </footer>
+
+  <!-- Chatbot -->
   <df-messenger
     project-id="agente-virtual-elvis"
     agent-id="f46cb852-a0cd-4874-a1b3-72bae3a682ff"
@@ -17,19 +100,5 @@
     max-query-length="-1">
     <df-messenger-chat-bubble chat-title="GARAÑON"></df-messenger-chat-bubble>
   </df-messenger>
-  
-  <style>
-    df-messenger {
-      z-index: 999;
-      position: fixed;
-      --df-messenger-font-color: #000;
-      --df-messenger-font-family: Google Sans;
-      --df-messenger-chat-background: #f3f6fc;
-      --df-messenger-message-user-background: #d3e3fd;
-      --df-messenger-message-bot-background: #fff;
-      bottom: 16px;
-      right: 16px;
-    }
-  </style>
 </body>
 </html>
