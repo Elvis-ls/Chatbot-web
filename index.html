@@ -2,60 +2,110 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Chatbot GARAÑON - Segunda Guerra Mundial</title>
+  <title>GARAÑON - Historia de la Segunda Guerra Mundial</title>
   <link rel="stylesheet" href="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/themes/df-messenger-default.css">
   <script src="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/df-messenger.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
 
   <style>
     body {
       margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-family: 'Special Elite', monospace;
       background: url('https://images.unsplash.com/photo-1604186838366-3f5e1c2e2c12?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80') no-repeat center center fixed;
       background-size: cover;
-      color: #f0f0f0;
-      text-align: center;
+      color: #f5f5dc;
+      line-height: 1.6;
     }
 
     header {
-      background: rgba(0, 0, 0, 0.7);
-      padding: 20px;
-      border-bottom: 2px solid #555;
+      background: rgba(20, 20, 20, 0.85);
+      padding: 25px;
+      text-align: center;
+      border-bottom: 3px solid #8b7d6b;
     }
 
     header h1 {
-      font-size: 2.5em;
-      color: #d4d4aa;
-      font-family: "Courier New", Courier, monospace;
-      letter-spacing: 3px;
+      font-size: 2.8em;
+      color: #d4c99c;
+      letter-spacing: 4px;
       text-transform: uppercase;
+      margin: 0;
+    }
+
+    nav {
+      background: rgba(0, 0, 0, 0.7);
+      padding: 12px;
+      text-align: center;
+    }
+
+    nav a {
+      color: #d4c99c;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #fff;
     }
 
     main {
-      max-width: 800px;
-      margin: 50px auto;
-      background: rgba(0, 0, 0, 0.65);
+      max-width: 1000px;
+      margin: 30px auto;
+      background: rgba(0, 0, 0, 0.7);
       padding: 30px;
-      border-radius: 10px;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.8);
+    }
+
+    section {
+      margin-bottom: 40px;
+    }
+
+    section h2 {
+      color: #d4c99c;
+      border-left: 5px solid #8b7d6b;
+      padding-left: 10px;
+      margin-bottom: 15px;
+      font-size: 1.8em;
+    }
+
+    section p {
+      color: #e0e0e0;
+      text-align: justify;
+      font-size: 1.1em;
+    }
+
+    .img-box {
+      margin: 20px 0;
+      text-align: center;
+    }
+
+    .img-box img {
+      max-width: 90%;
+      border: 3px solid #8b7d6b;
+      border-radius: 6px;
       box-shadow: 0px 0px 15px rgba(0,0,0,0.7);
     }
 
-    main h2 {
-      color: #e0e0b0;
-      margin-bottom: 15px;
-    }
-
-    main p {
-      font-size: 1.1em;
-      line-height: 1.6;
-      color: #ddd;
+    blockquote {
+      margin: 30px auto;
+      padding: 20px;
+      background: rgba(255,255,255,0.05);
+      border-left: 5px solid #d4c99c;
+      font-style: italic;
+      color: #f5f5dc;
+      text-align: center;
     }
 
     footer {
-      margin-top: 40px;
+      background: rgba(20, 20, 20, 0.85);
       padding: 15px;
-      background: rgba(0, 0, 0, 0.7);
-      font-size: 0.9em;
+      text-align: center;
       color: #aaa;
+      font-size: 0.9em;
+      border-top: 3px solid #8b7d6b;
     }
 
     /* Chatbot estilos */
@@ -63,7 +113,7 @@
       z-index: 999;
       position: fixed;
       --df-messenger-font-color: #000;
-      --df-messenger-font-family: Google Sans;
+      --df-messenger-font-family: 'Segoe UI';
       --df-messenger-chat-background: #f3f6fc;
       --df-messenger-message-user-background: #a3b18a;
       --df-messenger-message-bot-background: #fff;
@@ -74,18 +124,65 @@
 </head>
 <body>
   <header>
-    <h1>GARAÑON - Chatbot de la Segunda Guerra Mundial</h1>
+    <h1>Segunda Guerra Mundial</h1>
   </header>
 
+  <nav>
+    <a href="#contexto">Contexto</a>
+    <a href="#batallas">Batallas Clave</a>
+    <a href="#lideres">Líderes</a>
+    <a href="#impacto">Impacto</a>
+  </nav>
+
   <main>
-    <h2>Explora la Historia</h2>
-    <p>
-      Este sitio está dedicado a ofrecer información y curiosidades sobre la Segunda Guerra Mundial.  
-      A través de nuestro asistente virtual <strong>GARAÑON</strong>, podrás interactuar y consultar datos sobre batallas, líderes, fechas históricas y mucho más.  
-    </p>
-    <p>
-      Haz clic en el ícono de chat en la esquina inferior derecha y comienza a conversar con el asistente.
-    </p>
+    <section id="contexto">
+      <h2>Contexto Histórico</h2>
+      <p>
+        La Segunda Guerra Mundial (1939-1945) fue el conflicto más grande y devastador de la historia. 
+        Involucró a la mayoría de las naciones del mundo, divididas en dos alianzas militares: 
+        los Aliados y las Potencias del Eje. 
+      </p>
+      <div class="img-box">
+        <img src="https://tse2.mm.bing.net/th/id/OIP.PiJ2pn111uABDZGF6kEDLQHaEK?cb=12&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Montaje Segunda Guerra Mundial">
+      </div>
+    </section>
+
+    <section id="batallas">
+      <h2>Batallas Clave</h2>
+      <p>
+        Entre las batallas más significativas se encuentran la Batalla de Stalingrado, 
+        el Desembarco de Normandía (Día D) y la Batalla de Midway. 
+        Cada una marcó un punto de inflexión en el rumbo de la guerra.
+      </p>
+      <blockquote>"Nunca tantos debieron tanto a tan pocos." - Winston Churchill</blockquote>
+    </section>
+
+    <section id="lideres">
+      <h2>Líderes</h2>
+      <p>
+        Figuras clave como Winston Churchill, Franklin D. Roosevelt, Iósif Stalin, Adolf Hitler, 
+        y Benito Mussolini tuvieron un papel decisivo en el desarrollo del conflicto.
+      </p>
+      <div class="img-box">
+        <img src="https://tse1.explicit.bing.net/th/id/OIP.ZmD3kujZkttFvFKHddM5hgHaEJ?cb=12&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Líderes Segunda Guerra Mundial">
+      </div>
+    </section>
+
+    <section id="impacto">
+      <h2>Impacto Mundial</h2>
+      <p>
+        El conflicto dejó más de 70 millones de muertos, destruyó ciudades enteras y dio origen a una nueva 
+        configuración política mundial: el inicio de la Guerra Fría entre Estados Unidos y la Unión Soviética.
+      </p>
+    </section>
+
+    <section>
+      <h2>Explora con GARAÑON</h2>
+      <p>
+        Haz clic en el ícono de chat en la esquina inferior derecha para interactuar con 
+        <strong>GARAÑON</strong>, tu asistente virtual de la Segunda Guerra Mundial.
+      </p>
+    </section>
   </main>
 
   <footer>
